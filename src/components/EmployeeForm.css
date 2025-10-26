@@ -1,0 +1,27 @@
+.employee-form {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #333;
+  background-color: #f9f9f9;
+  max-width: 400px;
+}
+
+.employee-form div {
+  margin-bottom: 10px;
+}
+
+.employee-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.employee-form input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.employee-form button {
+  padding: 10px 15px;
+  cursor: pointer;
+}
