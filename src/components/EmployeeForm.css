@@ -15,15 +15,14 @@
 
 .employee-form {
   display: flex;
-  flex-direction: column; /* vertical stack */
-  width: 300px;
+  flex-direction: column; 
+  width: 300px; 
 }
 
 .employee-form label {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 5px;
-  text-align: left; /* labels left-aligned */
 }
 
 .employee-form input {
@@ -34,18 +33,14 @@
   box-sizing: border-box;
 }
 
-.employee-form button {
+.employee-form-wrapper .employee-form button {
   margin-top: 20px;
   padding: 10px;
-  background-color: #0077cc;
+  background-color: #0077cc; /* blue */
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   width: 50%;
-  align-self: center; /* center the button */
-}
-
-.employee-form button:hover {
-  background-color: #005fa3;
+  align-self: center;
 }

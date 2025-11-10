@@ -1,38 +1,70 @@
 .App {
   text-align: center;
+  margin: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.employee-form {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.employee-form div {
+  margin-bottom: 8px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.employee-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.employee-form input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.employee-form button {
+  margin-top: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.employee-list {
+  margin-top: 30px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.employee-list table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-list th, .employee-list td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.employee-list th {
+  background: #4caf50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.delete-btn:hover {
+  opacity: 0.9;
 }

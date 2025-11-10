@@ -1,59 +1,56 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import './EmployeeForm.css';
 
-function EmployeeForm({ onSubmit }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    title: "",
-    department: ""
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+function EmployeeForm({ addEmployee }) {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [jobTitle, setJobTitle] = useState('');
+  const [department, setDepartment] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(formData); // Saves to state AND localStorage
-    setFormData({ name: "", email: "", title: "", department: "" });
+    addEmployee({ name, email, jobTitle, department });
+    setName('');
+    setEmail('');
+    setJobTitle('');
+    setDepartment('');
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Name"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-      />
-      <input
-        type="text"
-        name="title"
-        value={formData.title}
-        onChange={handleChange}
-        placeholder="Job Title"
-        required
-      />
-      <input
-        type="text"
-        name="department"
-        value={formData.department}
-        onChange={handleChange}
-        placeholder="Department"
-        required
-      />
-      <button type="submit">Submit</button>
-    </form>
+    <div className="employee-form-wrapper">
+      <h2 className="form-title">Add Employees</h2>
+      <form className="employee-form" onSubmit={handleSubmit}>
+        <label>Name</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <label>Email</label>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <label>Job Title</label>
+        <input
+          type="text"
+          value={jobTitle}
+          onChange={(e) => setJobTitle(e.target.value)}
+        />
+
+        <label>Department</label>
+        <input
+          type="text"
+          value={department}
+          onChange={(e) => setDepartment(e.target.value)}
+        />
+
+        <button type="submit">Add Employee</button>
+      </form>
+    </div>
   );
 }
 
